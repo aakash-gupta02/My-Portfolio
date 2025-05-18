@@ -59,11 +59,11 @@ export default function Resume() {
       {/* Education */}
       <div>
         <h2 className="text-2xl font-semibold text-white mb-4">Education</h2>
-        <div className="space-y-4 border-l-2 border-yellow-500 pl-4">
+        <div className="space-y-4 border-l-2 border-indigo-500 pl-4">
           {education.map((item, index) => (
             <div key={index}>
               <h3 className="text-white text-lg font-medium">{item.title}</h3>
-              <p className="text-sm text-yellow-400">{item.time}</p>
+              <p className="text-sm text-indigo-400">{item.time}</p>
               <p className="text-sm">{item.description}</p>
             </div>
           ))}
@@ -73,11 +73,11 @@ export default function Resume() {
       {/* Experience */}
       <div>
         <h2 className="text-2xl font-semibold text-white mb-4">Experience</h2>
-        <div className="space-y-6 border-l-2 border-yellow-500 pl-4">
+        <div className="space-y-6 border-l-2 border-indigo-500 pl-4">
           {experience.map((item, index) => (
             <div key={index}>
               <h3 className="text-white text-lg font-medium">{item.title}</h3>
-              <p className="text-sm text-yellow-400">{item.org}</p>
+              <p className="text-sm text-indigo-400">{item.org}</p>
               <p className="text-sm text-gray-400">{item.time}</p>
               <p className="text-sm mt-1">{item.skills}</p>
             </div>
@@ -97,7 +97,7 @@ export default function Resume() {
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div
-                  className="bg-yellow-400 h-full rounded-full"
+                  className="bg-indigo-400 h-full rounded-full"
                   style={{ width: `${skill.value}%` }}
                 ></div>
               </div>

@@ -30,7 +30,8 @@ export default function Contact() {
       <section className="relative h-64 w-full mb-8 rounded-2xl border border-gray-700 overflow-hidden">
         <iframe
           title="Location map"
-          src="https://www.google.com/maps?width=600&height=400&hl=en&q=vadodara&t&z=14&ie=UTF8&iwloc=B&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.948769377993!2d72.97808881490138!3d19.21833098700044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9001f6e5b3b%3A0x8c3b0b3b0b3b0b3b!2sThane%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1620222222222!5m2!1sen!2sin"
+
           className="w-full h-full border-0"
           loading="lazy"
           allowFullScreen
@@ -49,7 +50,7 @@ export default function Contact() {
               required
               value={formData.fullname}
               onChange={handleChange}
-              className="text-gray-200 bg-gray-900 placeholder-gray-500 text-base font-normal px-5 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-yellow-400"
+              className="text-gray-200 bg-gray-900 placeholder-gray-500 text-base font-normal px-5 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-indigo-400"
             />
             <input
               type="email"
@@ -58,7 +59,7 @@ export default function Contact() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="text-gray-200 bg-gray-900 placeholder-gray-500 text-base font-normal px-5 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-yellow-400"
+              className="text-gray-200 bg-gray-900 placeholder-gray-500 text-base font-normal px-5 py-3 rounded-xl border border-gray-700 focus:outline-none focus:border-indigo-400"
             />
           </div>
 
@@ -69,19 +70,19 @@ export default function Contact() {
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            className="text-gray-200 bg-gray-900 placeholder-gray-500 text-base font-normal px-5 py-4 rounded-xl border border-gray-700 focus:outline-none focus:border-yellow-400 resize-y max-h-52"
+            className="text-gray-200 bg-gray-900 placeholder-gray-500 text-base font-normal px-5 py-4 rounded-xl border border-gray-700 focus:outline-none focus:border-indigo-400 resize-y max-h-52"
           ></textarea>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full flex justify-center items-center gap-3 px-5 py-3 rounded-xl text-yellow-400 text-base font-medium
+            className={`w-full flex justify-center items-center gap-3 px-5 py-3 rounded-xl text-indigo-400 text-base font-medium
             bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 shadow-md
             transition-colors duration-300
             ${
               isSubmitting
                 ? "opacity-70 cursor-not-allowed"
-                : "hover:bg-gradient-to-r hover:from-yellow-400 hover:via-yellow-300 hover:to-yellow-400"
+                : "hover:bg-gradient-to-r hover:from-indigo-400 hover:via-indigo-300 hover:to-indigo-400"
             }`}
           >
             <IoPaperPlaneOutline size={20} />

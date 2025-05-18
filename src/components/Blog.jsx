@@ -77,7 +77,7 @@ export default function Blog() {
                     <time dateTime={blog.date}>{blog.date} · {blog.readTime}</time>
                   </div>
 
-                  <h3 className="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-yellow-400">
+                  <h3 className="text-xl font-semibold mb-2 transition-colors duration-300 group-hover:text-indigo-400">
                     {blog.title}
                   </h3>
 

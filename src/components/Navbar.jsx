@@ -17,7 +17,7 @@
 //                   onClick={() => setActivePage(link)}
 //                   className={`capitalize text-sm md:text-base font-medium transition-colors duration-200 ${
 //                     activePage === link
-//                       ? "text-yellow-400"
+//                       ? "text-indigo-400"
 //                       : "text-gray-300 hover:text-white"
 //                   }`}
 //                 >
@@ -34,7 +34,7 @@
 // }
 
 export default function Navbar({ activePage, setActivePage }) {
-  const navLinks = ["about", "resume", "portfolio", "blog", "contact"];
+  const navLinks = ["about", "resume", "projects","github", "contact"];
 
   return (
     <div className=" flex items-center justify-between px-6 py-4 z-50">
@@ -53,7 +53,7 @@ export default function Navbar({ activePage, setActivePage }) {
                 onClick={() => setActivePage(link)}
                 className={`capitalize text-sm font-medium transition-colors duration-200 ${
                   activePage === link
-                    ? "text-yellow-400"
+                    ? "text-indigo-300"
                     : "text-gray-300 hover:text-white"
                 }`}
               >

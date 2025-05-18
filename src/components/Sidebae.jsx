@@ -85,7 +85,7 @@ export default function Sidebar() {
         {contactDetails.map((item, index) => (
     <li
       key={index}
-      className="flex items-center gap-4 text-gray-300 group transition-all"
+      className="flex items-center gap-4 text-indigo-300 group transition-all"
     >
       {/* Icon Box with Left White Line */}
       <span className="relative h-9 w-9 rounded-lg bg-gray-800/80 flex items-center justify-center shadow-md">
@@ -95,16 +95,16 @@ export default function Sidebar() {
 
       {/* Label and Value */}
       <div className="flex flex-col">
-        <span className="text-xs text-gray-400">{item.label}</span>
+        <span className="text-xs text-indigo-400">{item.label}</span>
         {item.href ? (
           <a
             href={item.href}
-            className="text-sm text-gray-200 hover:underline transition-all"
+            className="text-sm text-indigo-200 hover:underline transition-all"
           >
             {item.value}
           </a>
         ) : (
-          <span className="text-sm text-gray-200">{item.value}</span>
+          <span className="text-sm text-indigo-200">{item.value}</span>
         )}
       </div>
     </li>
@@ -117,7 +117,7 @@ export default function Sidebar() {
 
 
       {/* Social Links */}
-      <div className="flex gap-4 text-xl text-gray-400">
+      <div className="flex gap-4 text-xl text-indigo-400">
         {socialLinks.map((link, index) => (
           <a
             key={index}
