@@ -1,5 +1,16 @@
 import { useState } from "react";
+import {
+  FiMail,
+  FiPhone,
+  FiCalendar,
+  FiMapPin,
+  FiGithub,
+  FiLinkedin,
+  FiInstagram,
+  FiMessageCircle,
+} from "react-icons/fi";
 import { IoPaperPlaneOutline } from "react-icons/io5";
+import Button from "./Button";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +20,28 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const socialLinks = [
+    {
+      icon: <FiGithub />,
+      href: "https://github.com/aakash-gupta02",
+      label: "GitHub",
+    },
+    {
+      icon: <FiLinkedin />,
+      href: "#",
+      label: "LinkedIn",
+    },
+    {
+      icon: <FiInstagram />,
+      href: "https://www.instagram.com/aakash.grafix",
+      label: "Instagram",
+    },
+    {
+      icon: <FiMessageCircle />,
+      href: "t.me/aakashgupta052004",
+      label: "Telegram",
+    },
+  ];
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -27,20 +60,7 @@ export default function Contact() {
         <h2 className="text-3xl font-semibold mb-6">Contact</h2>
       </header>
 
-      <section className="relative h-64 w-full mb-8 rounded-2xl border border-gray-700 overflow-hidden">
-        <iframe
-          title="Location map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.948769377993!2d72.97808881490138!3d19.21833098700044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9001f6e5b3b%3A0x8c3b0b3b0b3b0b3b!2sThane%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1620222222222!5m2!1sen!2sin"
-
-          className="w-full h-full border-0"
-          loading="lazy"
-          allowFullScreen
-        ></iframe>
-      </section>
-
       <section>
-        <h3 className="text-2xl font-semibold mb-5">Contact Form</h3>
-
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 gap-6 mb-6 sm:grid-cols-2">
             <input
@@ -69,8 +89,7 @@ export default function Contact() {
             required
             value={formData.message}
             onChange={handleChange}
-            rows={5}
-            className="text-gray-200 bg-gray-900 placeholder-gray-500 text-base font-normal px-5 py-4 rounded-xl border border-gray-700 focus:outline-none focus:border-indigo-400 resize-y max-h-52"
+            className="text-gray-200 bg-gray-900 placeholder-gray-500 text-base font-normal px-5 py-4 rounded-xl border border-gray-700 focus:outline-none focus:border-indigo-400 w-full resize-none "
           ></textarea>
 
           <button
@@ -82,7 +101,7 @@ export default function Contact() {
             ${
               isSubmitting
                 ? "opacity-70 cursor-not-allowed"
-                : "hover:bg-gradient-to-r hover:from-indigo-400 hover:via-indigo-300 hover:to-indigo-400"
+                : "hover:bg-gradient-to-r hover:from-indigo-400 hover:via-indigo-300 hover:to-indigo-400 hover:text-gray-800 "
             }`}
           >
             <IoPaperPlaneOutline size={20} />
@@ -90,6 +109,33 @@ export default function Contact() {
           </button>
         </form>
       </section>
+
+      <header>
+        {/* <Button/> */}
+        <h2 className="text-3xl font-semibold my-6">Socials</h2>
+      </header>
+
+      <div className="grid grid-cols-2 grid-rows-1 gap-4 text-xl text-indigo-400">
+        {socialLinks.map((link, index) => (
+          <a
+            key={index}
+            href={link.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={link.label}
+            title={link.label}
+            className="hover:text-white transition-transform hover:scale-110 flex items-center gap-2  "
+          >
+            <span className="relative h-9 w-9 rounded-lg bg-gray-800/80 flex items-center justify-center shadow-md">
+              {" "}
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-0.5 bg-white/50 rounded"></span>
+              {link.icon}
+            </span>{" "}
+            {link.label}
+          </a>
+        ))}
+      </div>
+
     </article>
   );
 }
